@@ -1,9 +1,17 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage.jsx'
+import LoginPage from './pages/LoginPage.jsx'
+import ProfilePage from './pages/ProfiePage.jsx'
 
 const App = () => {
   return (
-    <div className='text-center mt-10 text-3xl font-bold'>
-      Hello, World!
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+      </Routes>
     </div>
   )
 }
