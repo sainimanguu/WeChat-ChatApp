@@ -6,7 +6,7 @@ import ProfilePage from './pages/ProfiePage.jsx'
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-[url('./src/assets/bgImage.svg')] bg-contain">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
@@ -17,3 +17,4 @@ const App = () => {
 }
 
 export default App
+
