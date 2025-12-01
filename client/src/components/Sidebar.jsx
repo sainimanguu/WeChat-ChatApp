@@ -3,7 +3,7 @@ import assets, { userDummyData } from '../assets/assets.js'
 import { useNavigate } from 'react-router-dom'
 
 const Sidebar = ({ selectedUser, setSelectedUser }) => {
-    //const navigate = useNavigate();
+
     const navigate = useNavigate();
 
     return (
@@ -30,7 +30,7 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
 
             <div className='flex flex-col'>
                 {userDummyData.map((user, index) => (
-                    <div key={index} className={`relative flex items-center gap-2 pl-4 rounded cursor-pointer max-sm:text-sm ${selectedUser?._id === user._id && 'bg-[282142]/50'}`} key={user.id} onClick={() => setSelectedUser(user)}>
+                    <div className={`relative flex items-center gap-2 pl-4 rounded cursor-pointer max-sm:text-sm ${selectedUser?._id === user._id && 'bg-[282142]/50'}`} key={user.id} onClick={() => setSelectedUser(user)}>
                         <img src={user?.profilePic || assets.avatar_icon} alt="pic" className='w-[35px] aspext-[1/1] rounded-full' />
                         <div className='flex flex-col leading-3'>
                             <p>{user.fullName}</p>
