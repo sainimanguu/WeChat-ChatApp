@@ -28,9 +28,10 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
                 </div>
             </div>
 
-            <div className='flex flex-col'>
+            <div className='flex flex-col gap-3'>
                 {userDummyData.map((user, index) => (
-                    <div className={`relative flex items-center gap-2 pl-4 rounded cursor-pointer max-sm:text-sm ${selectedUser?._id === user._id && 'bg-[282142]/50'}`} key={user.id} onClick={() => setSelectedUser(user)}>
+                    <div onClick={() => { setSelectedUser(user) }}
+                        key={index} className={`relative flex items-center gap-2 pl-4 rounded cursor-pointer max-sm:text-sm ${selectedUser?._id === user._id && 'bg-[282142]/50'}`}>
                         <img src={user?.profilePic || assets.avatar_icon} alt="pic" className='w-[35px] aspext-[1/1] rounded-full' />
                         <div className='flex flex-col leading-3'>
                             <p>{user.fullName}</p>
@@ -38,7 +39,7 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
                                 index < 3 ? <sapn className='text-green-400 text-xs'>Online</sapn> : <span className='text-neutral-400 text-xs'>Off-line</span>
                             }
                         </div>
-                        {index > 2 && <p className='absolute top-4 right-4 text-xs h-5 w-5 flex justify-center items-center rounded-full bg-voilet-500/50'>{index}</p>}
+                        {index > 2 && <p className='absolute top-4 right-4 text-xs h-5 w-5 flex justify-center items-center rounded-full bg-purple-500/50'>{index}</p>}
                     </div>
                 ))}
             </div>
