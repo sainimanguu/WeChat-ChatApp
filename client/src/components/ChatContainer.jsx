@@ -24,12 +24,12 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
                         {msg.image ? (
                             <img className='max-w-[230px] border border-gray-700 rounded-lg overflow-hidden mb-8' src={msg.image} alt='' />
                         ) : (
-                            <p className={``}>{msg.text}</p>
+                            <p className={`p-2 max-w-[200px] md:text-sm font-light rounded-lg mb-8 break-all bg-voilet-500/50 text-wwhite ${msg.senderId === '68028388838fg9' ? 'rounded-br-none' : 'rounded-bl-none'}`}>{msg.text}</p>
                         )}
                     </div>
                 ))}
             </div>
-        </div>
+        </div> 
     ) : (
         <div className='flex flex-col items-center justify-center gap-2 text-gray-500 bg-white/10 max-md:hidden'>
             <img src={assets.logo_icon} alt='' className='max-w-16' />
