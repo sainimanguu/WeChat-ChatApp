@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
-import ProfilePage from './pages/ProfiePage.jsx'
+import ProfilePage from './pages/ProfilePage.jsx'
 
 const App = () => {
   return (
