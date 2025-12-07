@@ -1,0 +1,18 @@
+import express from 'express'
+import {
+    signup,
+    login,
+    updateProfile,
+    checkAuth
+} from '../controllers/userController.js';
+
+import { protectRoute } from '../midddleware/auth.js'
+
+const userRouter = express.Router();
+
+userRouter.post("/signup", signup);
+userRouter.post("/login", login);
+userRouter.put("/updateprofile", protectRoute, updateProfile);
+userRouter.get("/checkauth", protectRoute, checkAuth);
+
+export default userRouter
