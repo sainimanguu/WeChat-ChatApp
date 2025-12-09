@@ -26,15 +26,19 @@ export const signup = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, salt)
 
 
-        const newUser = await User.create({ fullName, email, hashedPassword, bio });
+        const newUser = await User.create({ fullName, email, password: hashedPassword, bio });
 
         const token = generatetoken(newUser._id);
 
+        const userResponse = newUser.toObject();
+        delete userResponse.password;
+
         res.json({
             success: true,
-            userData: newUser, token,
+            userData: userResponse,
+            token,
             message: "Account Created successfully"
-        })
+        });
 
     } catch (error) {
         console.log(error.message),
@@ -46,14 +50,19 @@ export const signup = async (req, res) => {
     }
 }
 
-export const login = async () => {
+export const login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
         const userData = await User.findOne({ email })
+        if (!userData) {
+            return res.json({
+                success: false,
+                message: "Invalid email or password",
+            });
+        }
 
         const isPasswordCorrect = await bcrypt.compare(password, userData.password);
-
         if (!isPasswordCorrect) {
             return res.json({
                 success: false,
@@ -65,8 +74,8 @@ export const login = async () => {
 
         res.json({
             success: true,
-            userData: newUser, token,
-            message: "Avccount created successfully"
+            userData, token,
+            message: "Login successfully"
         })
     }
     catch (error) {
@@ -104,7 +113,7 @@ export const updateProfile = async (req, res) => {
 
         res.json({
             success: true,
-            updatedUser,
+            user: updatedUser,
         })
     } catch (error) {
         res.json({
