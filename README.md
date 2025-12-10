@@ -62,7 +62,7 @@ MongoDB + Mongoose
 JSON Web Tokens (JWT)
 Cloudinary (Image uploads)<br/>
 
-📦 Project Structure (Simplified)<br/>
+# 📦 Project Structure (Simplified)<br/>
 /client
   /src
     /context
