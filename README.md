@@ -93,7 +93,7 @@ Cloudinary (Image uploads)<br/>
 git clone <repo-url>
 
 # install client
-cd client
+cd client<br/>
 npm install
 
 # install server
