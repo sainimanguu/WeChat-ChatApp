@@ -73,23 +73,23 @@ Cloudinary (Image uploads)<br/>
       ChatContainer.jsx
     /assets
       icons, images
-    App.jsx
+    App.jsx<br/>
 
-/server
+/server<br/>
   /controllers
       message.controller.js
-      user.controller.js
-  /models
+      user.controller.js<br/>
+  /models<br/>
       Message.js
-      User.js
-  /routes
+      User.js<br/>
+  /routes<br/>
       message.routes.js
-      user.routes.js
-  /socket
-      index.js
-  server.js
+      user.routes.js<br/>
+  /socket<br/>
+      index.js<br/>
+  server.js<br/>
 
-⚙️Installation
+# ⚙️Installation
 git clone <repo-url>
 
 # install client
@@ -103,7 +103,7 @@ npm install
 # Run Backend
 npm run server
 
-#Run Frontend 
+# Run Frontend 
 npm run dev
 
 
