@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import assets, { messagesDummyData } from '../assets/assets'
+import assets from '../assets/assets'
 import { formatMessageTime } from '../lib/utils'
 import { ChatContext } from '../../context/ChatContext'
 import { AuthContext } from '../../context/AuthContext'
 
 const ChatContainer = () => {
 
-    const { messages, selectedUser, setselectedUser, sendMessage, getMessages } = useContext(ChatContext);
+    const { messages, selectedUser, setSelectedUser, sendMessage, getMessages } = useContext(ChatContext);
 
     const { authUser, onlineUsers } = useContext(AuthContext);
 
@@ -23,7 +23,7 @@ const ChatContainer = () => {
 
     const handleSendImage = async (e) => {
         const file = e.target.files[0];
-        if (!file || file.type.startsWith("image/")) {
+        if (!file || !file.type.startsWith("image/")) {
             toast.error("select an image file")
             return;
         }
@@ -56,9 +56,9 @@ const ChatContainer = () => {
                 <img src={selectedUser.profilePic || assets.avatar_icon} alt='' className='w-8 rounded-full' />
                 <p className='flex-1 text-lg text-white flex items-center gap-2'>
                     {selectedUser.fullName}
-                    {onlineUsers.includes(selectedUser._id)} <span className='w-2 h-2 rounded-full bg-green-500'></span>
+                    {onlineUsers.includes(selectedUser._id) && <span className='w-2 h-2 rounded-full bg-green-500'></span>}
                 </p>
-                <img onClick={() => setselectedUser(null)} src={assets.arrow_icon} alt='' className='md:hidden max-w-7' />
+                <img onClick={() => setSelectedUser(null)} src={assets.arrow_icon} alt='' className='md:hidden max-w-7' />
                 <img src={assets.help_icon} alt='' className='max-md:hidden max-w-5' />
             </div>
 
@@ -66,7 +66,7 @@ const ChatContainer = () => {
             <div className='flex flex-col h-[calc(100%-120px)] overflow-y-scroll p-3 pb-6'>
 
                 {messages.map((msg, index) => (
-                    <div key={index} className={`flex items-end gap-2 justify-end ${msg.senderId !== authUser._id && "flex-row-reverse"}`}>
+                    <div key={index} className={`flex items-end gap-2 justify-end ${msg.senderId === authUser._id && "flex-row-reverse"}`}>
                         {msg.image ? (
                             <img className='max-w-[230px] border border-gray-700 rounded-lg overflow-hidden mb-8' src={msg.image} alt='' />
                         ) : (
