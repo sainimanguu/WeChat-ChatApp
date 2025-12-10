@@ -1,4 +1,4 @@
-# QuickChat-Chat App
+# WeChat-Chat App
 This project is a full-stack real-time chat application built using the MERN stack, Socket.io, and Cloudinary. It supports 1-to-1 messaging, online/offline status, real-time updates, image sharing, and message tracking.<br/>
 
 ⭐ Features<br/>
