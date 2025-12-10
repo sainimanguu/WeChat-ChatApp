@@ -48,14 +48,14 @@ Fetch users
 Mark messages as seen
 Socket.io event handlers for real-time communication<br/>
 
-🧰 Tech Stack
-Frontend
+🧰 Tech Stack<br/>
+# Frontend
 React.js
 Context API (Auth + Chat Context)
 TailwindCSS
 Socket.io-client<br/>
 
-Backend<br/>
+# Backend<br/>
 Node.js / Express.js
 Socket.io
 MongoDB + Mongoose
@@ -90,20 +90,20 @@ Cloudinary (Image uploads)<br/>
   server.js<br/>
 
 # ⚙️Installation
-git clone <repo-url>
+git clone <repo-url><br/>
 
 # install client
 cd client<br/>
 npm install
 
-# install server
+# install server<br/>
 cd ../server
 npm install
 
-# Run Backend
+# Run Backend<br/>
 npm run server
 
-# Run Frontend 
+# Run Frontend <br/>
 npm run dev
 
 
