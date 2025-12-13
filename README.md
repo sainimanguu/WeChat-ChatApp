@@ -66,10 +66,10 @@ Cloudinary (Image uploads)<br/>
 /client<br/>
   /srct<br/>
     /contextt<br/>
-      AuthContext.jsxt<br/>
-      ChatContext.jsxt<br/>
+      AuthContext.jsx<br/>
+      ChatContext.jsx<br/>
     /componentstt<br/>
-      Sidebar.jsxtt<br/>
+      Sidebar.jsx<br/>
       ChatContainer.jsxt<br/>
     /assetst<br/>
       icons, imagest<br/>
