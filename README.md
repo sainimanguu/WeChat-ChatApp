@@ -64,15 +64,15 @@ Cloudinary (Image uploads)<br/>
 
 # 📦 Project Structure (Simplified)<br/>
 /client<br/>
-  /src
-    /context
-      AuthContext.jsx
-      ChatContext.jsx
-    /components
-      Sidebar.jsx
-      ChatContainer.jsx
-    /assets
-      icons, images
+  /srct<br/>
+    /contextt<br/>
+      AuthContext.jsxt<br/>
+      ChatContext.jsxt<br/>
+    /componentstt<br/>
+      Sidebar.jsxtt<br/>
+      ChatContainer.jsxt<br/>
+    /assetst<br/>
+      icons, imagest<br/>
     App.jsx<br/>
 
 /server<br/>
