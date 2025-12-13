@@ -63,7 +63,7 @@ JSON Web Tokens (JWT)
 Cloudinary (Image uploads)<br/>
 
 # 📦 Project Structure (Simplified)<br/>
-/client
+/client<br/>
   /src
     /context
       AuthContext.jsx
