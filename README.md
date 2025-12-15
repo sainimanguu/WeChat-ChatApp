@@ -97,7 +97,7 @@ cd client<br/>
 npm install
 
 # install server<br/>
-cd ../server
+cd server</br>
 npm install
 
 # Run Backend<br/>
