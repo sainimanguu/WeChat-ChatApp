@@ -94,17 +94,18 @@ git clone <repo-url><br/>
 
 # install client
 cd client<br/>
-npm install
+npm i
 
 # install server<br/>
 cd server</br>
 npm install
 
+# Run Frontend <br/>
+npm run dev
+
 # Run Backend<br/>
 npm run server
 
-# Run Frontend <br/>
-npm run dev
 
 
 
