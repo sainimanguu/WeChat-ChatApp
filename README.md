@@ -49,17 +49,17 @@ Mark messages as seen
 Socket.io event handlers for real-time communication<br/>
 
 # 🧰 Tech Stack<br/>
-# Frontend
-React.js
-Context API (Auth + Chat Context)
-TailwindCSS
+# Frontend<br/>
+React.js<br/>
+Context API (Auth + Chat Context)<br/>
+TailwindCSS<br/>
 Socket.io-client<br/>
 
 # Backend<br/>
-Node.js / Express.js
-Socket.io
-MongoDB + Mongoose
-JSON Web Tokens (JWT)
+Node.js / Express.js<br/>
+Socket.io<br/>
+MongoDB + Mongoose<br/>
+JSON Web Tokens (JWT)<br/>
 Cloudinary (Image uploads)<br/>
 
 # 📦 Project Structure (Simplified)<br/>
