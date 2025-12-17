@@ -48,7 +48,7 @@ Fetch users
 Mark messages as seen
 Socket.io event handlers for real-time communication<br/>
 
-🧰 Tech Stack<br/>
+#🧰 Tech Stack<br/>
 # Frontend
 React.js
 Context API (Auth + Chat Context)
